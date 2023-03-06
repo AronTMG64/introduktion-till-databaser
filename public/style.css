@@ -1,0 +1,36 @@
+body {
+  height: 100vh;
+}
+
+#parent {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: #e3e3e3;
+  border-spacing: 0;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
+}
+
+.tr {
+  cursor: pointer;
+}
+
+.tr:hover {
+  transform: scale(1.01);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+  background-color: #d4d4d4;
+}
+
+td, .tr {
+  border-radius: 1px;
+}
+
+.text-center {
+  text-align: center;
+}
