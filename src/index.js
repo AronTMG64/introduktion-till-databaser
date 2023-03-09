@@ -1,4 +1,3 @@
-// get the client
 const path = require('path');
 const express = require('express');
 const mysql = require('mysql2');
@@ -13,26 +12,6 @@ const db = mysql.createConnection({
   user: 'root',
   database: 'gamesdb'
 });
-
-/*
-// simple query
-db.query(
-  'SELECT * FROM `games`',
-  function(err, results, fields) {
-    console.log(results); // results contains rows returned by server
-    console.log(fields); // fields contains extra meta data about results, if available
-  }
-);
-
-// with placeholder
-db.query(
-  'SELECT * FROM `table` WHERE `name` = ? AND `age` > ?',
-  ['Page', 45],
-  function(err, results) {
-    console.log(results);
-  }
-);
-*/
 
 server.get('/api/games', (req, res) => {
   db.query(
