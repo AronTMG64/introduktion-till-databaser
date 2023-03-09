@@ -21,7 +21,7 @@ async function fetchGames() {
           <td class="text-center">${game.id}.</td>
           <td>${game.name}</td>
           <td class="text-center">${game.genre}</td>
-          <td>${game.release_date.slice(0, 10)}</td>
+          <td class="text-center">${game.release_date.slice(0, 10)}</td>
           <td class="text-center">${game.publisher}</td>
         </tr>
       `).join('')}
