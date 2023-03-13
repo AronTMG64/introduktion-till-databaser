@@ -17,7 +17,7 @@ async function fetchGames() {
         <th>Publisher</th>
       </tr>
       ${data.map(game => `
-        <tr class="tr">
+        <tr class="tr ${game.id}">
           <td class="text-center">${game.id}.</td>
           <td>${game.name}</td>
           <td class="text-center">${game.genre}</td>
@@ -27,4 +27,11 @@ async function fetchGames() {
       `).join('')}
     </table>
   `;
-}
+
+  const games = document.querySelectorAll('.tr');
+  games.forEach(game => {
+    game.addEventListener('click', () => {
+      window.location.href = `http://localhost:3000/game/${game.classList[1]}`;
+    });
+  });
+};
